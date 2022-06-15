@@ -1,0 +1,10 @@
+<div class="app-tabs">
+   <div 
+      *ngFor="let tab of list"
+      class="app-tab-item"
+      [class.active]="tab.key == active"
+      (click)="handleTabItemClickAction(tab)"
+      [title]="tab.label">
+      {{ tab.label }}
+   </div>
+</div>

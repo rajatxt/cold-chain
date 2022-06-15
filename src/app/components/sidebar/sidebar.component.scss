@@ -5,7 +5,10 @@ $sidebar-width: 80px;
 $sidebar-height: 100vh;
 
 .app-sidebar {
-   position: relative;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
    height: $sidebar-height;
    background-color: $background;
 

@@ -1,4 +1,6 @@
-<aside class="app-sidebar" [attr.aria-expanded]="sidebarExpanded">
+<aside class="app-sidebar" [attr.aria-expanded]="expanded">
+
+   <!--------- Sidebar Header --------->
    <header class="app-sidebar-header" (click)="toggleSidebarView()">
       <svg class="app-sidebar-logo" viewBox="0 0 118 135" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path fill-rule="evenodd" clip-rule="evenodd" d="M63.2143 1.12921C61.933 0.389453 60.4795 0 59 0C57.5205 0 56.067 0.389453 54.7857 1.12921L4.21429 31.2782C2.93301 32.018 1.86903 33.0819 1.12927 34.3632C0.389509 35.6445 3.75848e-05 37.0979 0 38.5774V96.2793C3.75848e-05 97.7588 0.389509 99.2122 1.12927 100.494C1.86903 101.775 2.93301 102.839 4.21429 103.578L54.7857 133.727C56.067 134.467 57.5205 134.857 59 134.857C60.4795 134.857 61.933 134.467 63.2143 133.727L113.786 103.578C115.067 102.839 116.131 101.775 116.871 100.494C117.61 99.2122 118 97.7588 118 96.2793V38.5774C118 37.0979 117.61 35.6445 116.871 34.3632C116.131 33.0819 115.067 32.018 113.786 31.2782L63.2143 1.12921Z" fill="black"/>
@@ -8,29 +10,50 @@
 
       <h3 class="app-sidebar-title">Coldchain</h3>
    </header>
+   <!--------- Sidebar Header --------->
+
+   <!--------- Sidebar Navigation Area --------->
    <div class="app-sidebar-nav">
-      <a href="#home" class="app-sidebar-nav-item">
+
+      <!-- Home Navigation -->
+      <a routerLink="/" class="app-sidebar-nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
          <i class="bi-house-fill icon"></i>
          <span class="label">Home</span>
       </a>
-      <a href="#home" class="app-sidebar-nav-item active">
+
+      <!-- NotifEye Navigation -->
+      <a routerLink="notifeye" class="app-sidebar-nav-item" routerLinkActive="active">
          <i class="bi-hdd-fill icon"></i>
          <span class="label">NotifEye</span>
       </a>
-      <a href="#haccp" class="app-sidebar-nav-item">
+
+      <!-- HACCP Navigation -->
+      <a routerLink="haccp/checklists" class="app-sidebar-nav-item" routerLinkActive="active">
          <i class="bi-check-circle-fill icon"></i>
          <span class="label">HACCP Checklist</span>
       </a>
-      <a href="#haccp" class="app-sidebar-nav-item">
+
+      <!-- RTS Navigation -->
+      <a routerLink="rts" class="app-sidebar-nav-item" routerLinkActive="active">
          <i class="bi-usb-fill icon"></i>
          <span class="label">RTS</span>
       </a>
-      <a href="#haccp" class="app-sidebar-nav-item">
+
+      <!-- Reports Navigation -->
+      <a routerLink="reports" class="app-sidebar-nav-item" routerLinkActive="active">
          <i class="bi-file-earmark-ruled-fill icon"></i>
          <span class="label">Reports</span>
       </a>
-   </div>
 
+      <!-- Settings Navigation -->
+      <a routerLink="settings" class="app-sidebar-nav-item" routerLinkActive="active">
+         <i class="bi-gear-fill icon"></i>
+         <span class="label">Settings</span>
+      </a>
+   </div>
+   <!--------- Sidebar Navigation Area --------->
+
+   <!--------- Sidebar Footer --------->
    <div class="app-sidebar-footer">
       <div class="app-sidebar-active-user-session">
          <div class="app-sidebar-user-image">
@@ -42,4 +65,6 @@
          </div>
       </div>
    </div>
+   <!--------- Sidebar Footer --------->
+
 </aside>

@@ -1,0 +1,13 @@
+@import "../../scss/themes/light.scss";
+
+$activity-padding-x: 16px;
+$activity-padding-y: 16px;
+
+.app-activity {
+   position: relative;
+   width: auto;
+   padding: $activity-padding-y $activity-padding-x;
+   border-radius: 12px;
+   background-color: $background;
+   box-shadow: rgba(154, 154, 154, 0.1) -4px 9px 25px -6px;
+}

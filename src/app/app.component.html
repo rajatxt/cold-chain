@@ -1,2 +1,8 @@
-<app-app-sidebar></app-app-sidebar>
-<h2>Welcome to ColdChain</h2>
+<div id="app">
+   <app-sidebar 
+      [expanded]="expandedView" 
+      (toggle)="handleSidebarToggleAction()">
+   </app-sidebar>
+
+   <app-main [expanded]="!expandedView"></app-main>
+</div>

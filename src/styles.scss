@@ -19,7 +19,7 @@ body {
    padding: 0;
    min-height: 100%;
    position: relative;
-   overflow: hidden;
+   overflow-x: hidden;
    font-family: $secondary-font-family;
    background-color: $surface-background;
 }
@@ -157,4 +157,9 @@ input[type="reset"] {
 }
 input:-webkit-autofill {
    box-shadow: 0 0 0 100px #fff inset;
+}
+
+::selection {
+   background-color: $primary-light;
+   color: #FFF;
 }

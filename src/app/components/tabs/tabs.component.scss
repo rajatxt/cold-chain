@@ -1,0 +1,50 @@
+@import "../../scss/themes/light.scss";
+
+$tab-height: 42px;
+
+.app-tabs {
+   display: flex;
+   width: auto;
+   height: $tab-height;
+   padding: 0 4px;
+   margin: 1rem 0;
+   flex-direction: row;
+   align-items: center;
+   gap: 24px;
+   justify-content: flex-start;
+   box-sizing: content-box;
+   border-bottom: 1px solid $accents-2;
+   
+   .app-tab-item {
+      position: relative;
+      box-sizing: content-box;
+      display: flex;
+      align-items: center;
+      height: $tab-height;  
+      cursor: pointer;
+      font-size: 86%;
+      font-weight: 600;
+      color: $accents-4;
+   
+      &::after {
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         content: "";
+         width: 60%;
+         border-radius: 12px;
+         background-color: transparent;
+         height: 2.3px;
+         transition: background-color 80ms ease;
+      }
+   
+      &.active {
+         color: $primary;
+
+         &::after {
+            background-color: $primary;
+         }
+      }
+   }
+}
