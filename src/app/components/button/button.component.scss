@@ -1,0 +1,49 @@
+@import "../../scss/themes/light.scss";
+@import "../../scss/vars";
+
+.app-button {
+   display: inline-flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+   margin-top: 8px;
+   margin-bottom: 8px;
+   width: 260px - 12px;
+   height: 24px;
+   padding: 8px 8px;
+   border: none;
+   font-size: 86%;
+   cursor: pointer;
+   border-radius: 8px;
+   font-family: $secondary-font-family;
+   box-shadow: none;
+   transition: box-shadow 240ms ease;
+
+   &:hover:not(:disabled) {
+      box-shadow: rgba(61, 61, 69, 0.2) 0px 7px 45px 0px;
+   }
+
+   &[disabled="true"] {
+      pointer-events: none;
+      background-color: $accents-2;
+      color: $accents-6;
+   }
+
+   &.button-default:not(:disabled) {
+      background-color: $accents-8;
+      color: $accents-0;
+   }
+   &.button-primary:not(:disabled) {
+      background-color: $primary;
+      color: $primary-fr;
+   }
+   &.button-success:not(:disabled) {
+      background-color: $success;
+      color: $success-fr;
+   }
+   &.button-error:not(:disabled) {
+      background-color: $error;
+      color: $error-fr;
+   }
+}

@@ -1,0 +1,5 @@
+<button [attr.type]="type" [class]="buttonClasses" [attr.disabled]="disabled? true: null">
+   <i *ngIf="leftIcon.length" [class]="leftIconClasses"></i>
+   <span *ngIf="text.length" class="app-button-text">{{text}}</span>
+   <i *ngIf="icon.length" [class]="iconClasses"></i>
+</button>

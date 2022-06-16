@@ -1,0 +1,6 @@
+
+@mixin medium-scale {
+   @media screen and (max-width: 940px) {
+      @content;
+   }
+}

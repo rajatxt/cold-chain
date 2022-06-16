@@ -1,8 +1,18 @@
 
 $app-input-width: 260px;
 
+.text-center {
+   text-align: center;
+}
+
 .text-primary {
    color: $primary;
+}
+.text-success {
+   color: $success;
+}
+.text-error {
+   color: $error;
 }
 
 .input-wrapper {
@@ -28,5 +38,11 @@ $app-input-width: 260px;
       border: 1.4px solid $accents-2;
       border-radius: 8px;
       background-color: $accents-1;
+      transition: border-color 120ms linear, background-color 80ms linear;
+
+      &:focus {
+         background-color: $background;
+         border-color: $primary-light;
+      }
    }
 }

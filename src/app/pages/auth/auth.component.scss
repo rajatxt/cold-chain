@@ -1,10 +1,11 @@
 @import "../../scss/themes/light.scss";
+@import "../../scss/scale";
 
 .app-auth-layout {
    overflow: hidden;
    height: 100vh;
    background-color: $surface-background;
-   // background-color: $background;
+   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 .app-auth-activity {
    display: flex;
@@ -20,4 +21,24 @@
    transform: translate(-50%, -50%);
    background-color: $background;
    box-shadow: rgba(145, 145, 147, 0.2) 0px 7px 34px 0px;
+   transition: all 260ms ease;
+
+   @include medium-scale {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-width: 80%;
+      transform: translate(0, 0);
+   }
+
+   .auth-logo {
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+   }
+
+   .auth-form {
+      margin-top: 123px;
+      background-color: red !important; 
+   }
 }

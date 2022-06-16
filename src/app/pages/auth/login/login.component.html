@@ -1,21 +1,30 @@
-<div class="app-auth-layout">
-   <div class="app-auth-activity">
-      <br />
-      <img src="../../../../assets/logo.svg" width="50px" />
-      <br />
-      <h3>Continue to <span class="text-primary">Coldchain</span></h3>
+<h3>Continue to&nbsp;<span class="text-primary">Coldchain</span></h3>
 
-      <form name="login">
-         <div class="input-wrapper">
-            <label class="input-label" for="email-input">Email</label>
-            <input class="input-controller" type="email" name="email" id="email-input" />
-         </div>
-         <div class="input-wrapper">
-            <label class="input-label" for="password-input">Password</label>
-            <input class="input-controller" type="password" name="password" id="password-input" />
-         </div>
-         <!-- <button type="submit">Login</button> -->
-      </form>
-      <p>Need to create new account <a [routerLink]="['/', 'auth', 'signup']">Signup</a></p>
+<form class="auth-form" name="login">
+
+   <!-- Login email input -->
+   <div class="input-wrapper">
+      <label class="input-label" for="email-input">Email</label>
+      <input 
+         class="input-controller" 
+         type="email" 
+         name="email" 
+         id="email-input"
+         required />
    </div>
-</div>
+
+   <!-- Login password input -->
+   <div class="input-wrapper">
+      <label class="input-label" for="password-input">Password</label>
+      <input 
+         class="input-controller" 
+         type="password" 
+         name="password" 
+         id="password-input"
+         required />
+   </div>
+
+   <app-button type="submit" color="primary" text="Continue" icon="arrow-right-circle" [disabled]="false"></app-button>
+</form>
+<br />
+<p class="text-center"><small>Create new account?&nbsp;<a [routerLink]="['/', 'auth', 'signup']">Signup</a></small></p>
