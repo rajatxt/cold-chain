@@ -8,6 +8,14 @@ const routes: Routes = [
       import('./pages/home/home.module').then((mod) => mod.HomeModule),
   },
   {
+    path: 'auth',
+    data: {
+      restricted: false
+    },
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((mod) => mod.AuthModule),
+  },
+  {
     path: 'notifeye',
     loadChildren: () =>
       import('./pages/notifeye/notifeye.module').then(

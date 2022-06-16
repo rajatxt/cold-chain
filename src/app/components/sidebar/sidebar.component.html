@@ -28,7 +28,13 @@
       </a>
 
       <!-- HACCP Navigation -->
-      <a routerLink="haccp/checklists" class="app-sidebar-nav-item" routerLinkActive="active">
+      <a 
+         routerLink="/haccp/checklists"
+         class="app-sidebar-nav-item" 
+         routerLinkActive="active" 
+         [routerLinkActiveOptions]="{ exact: false }">
+         <a routerLink="/haccp/checklists" hidden>Checklists</a>
+         <a routerLink="/haccp/settings" hidden>Settings</a>
          <i class="bi-check-circle-fill icon"></i>
          <span class="label">HACCP Checklist</span>
       </a>

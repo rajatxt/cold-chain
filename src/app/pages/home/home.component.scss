@@ -1,0 +1,18 @@
+.elevation {
+   padding-top: 8rem;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 34px;
+   flex-direction: column;
+   align-items: center;
+   opacity: 0.4;
+
+   .image {
+      margin: 0;
+      padding: 0;
+      width: 280px;
+      height: auto;
+   }
+}

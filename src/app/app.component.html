@@ -1,8 +1,17 @@
-<div id="app">
-   <app-sidebar 
-      [expanded]="expandedView" 
-      (toggle)="handleSidebarToggleAction()">
-   </app-sidebar>
+<div [ngSwitch]="activeLayout" id="app">
 
-   <app-main [expanded]="!expandedView"></app-main>
+   <!-- Auth layout container -->
+   <ng-container *ngSwitchCase="'AUTH'">
+      <router-outlet></router-outlet>
+   </ng-container>
+
+   <!-- Default layout container -->
+   <ng-container *ngSwitchCase="'DEFAULT'">
+      <app-sidebar 
+         [expanded]="expandedView" 
+         (toggle)="handleSidebarToggleAction()">
+      </app-sidebar>
+   
+      <app-main [expanded]="!expandedView"></app-main>
+   </ng-container>
 </div>
