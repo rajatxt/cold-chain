@@ -13,6 +13,7 @@ export class ButtonComponent implements OnInit {
   @Input() leftIcon: string = ''
   @Input() icon: string = ''
   @Input() disabled: boolean = false
+  @Input() loading: boolean = false
 
   constructor() {}
 

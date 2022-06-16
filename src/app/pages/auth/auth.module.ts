@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { LoginComponent } from './login/login.component'
 import { SignupComponent } from './signup/signup.component'
 import { ButtonComponent } from '../../components/button/button.component'
+import { LoaderComponent } from '../../components/loader/loader.component'
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     ButtonComponent,
+    LoaderComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(routes)],
 })
