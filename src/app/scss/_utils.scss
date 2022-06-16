@@ -1,0 +1,32 @@
+
+$app-input-width: 260px;
+
+.text-primary {
+   color: $primary;
+}
+
+.input-wrapper {
+   display: flex;
+   width: $app-input-width;
+   margin-top: 12px;
+   margin-bottom: 12px;
+   flex-direction: column;
+   align-items: flex-start;
+
+   .input-label {
+      font-size: 86%;
+      padding: 3px 4px;
+      font-weight: 500;
+      font-family: $secondary-font-family;
+   }
+
+   .input-controller {
+      padding: 4px 12px;
+      width: $app-input-width - 24px;
+      min-height: 30px;
+      font-size: 14.6px;
+      border: 1.4px solid $accents-2;
+      border-radius: 8px;
+      background-color: $accents-1;
+   }
+}

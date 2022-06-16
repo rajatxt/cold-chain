@@ -1,0 +1,23 @@
+@import "../../scss/themes/light.scss";
+
+.app-auth-layout {
+   overflow: hidden;
+   height: 100vh;
+   background-color: $surface-background;
+   // background-color: $background;
+}
+.app-auth-activity {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   padding: 18px;
+   min-width: 360px;
+   min-height: 410px;
+   border-radius: 12px;
+   transform: translate(-50%, -50%);
+   background-color: $background;
+   box-shadow: rgba(145, 145, 147, 0.2) 0px 7px 34px 0px;
+}

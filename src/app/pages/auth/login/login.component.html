@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="app-auth-layout">
+   <div class="app-auth-activity">
+      <br />
+      <img src="../../../../assets/logo.svg" width="50px" />
+      <br />
+      <h3>Continue to <span class="text-primary">Coldchain</span></h3>
+
+      <form name="login">
+         <div class="input-wrapper">
+            <label class="input-label" for="email-input">Email</label>
+            <input class="input-controller" type="email" name="email" id="email-input" />
+         </div>
+         <div class="input-wrapper">
+            <label class="input-label" for="password-input">Password</label>
+            <input class="input-controller" type="password" name="password" id="password-input" />
+         </div>
+         <!-- <button type="submit">Login</button> -->
+      </form>
+      <p>Need to create new account <a [routerLink]="['/', 'auth', 'signup']">Signup</a></p>
+   </div>
+</div>
